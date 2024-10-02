@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-Black.otf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-Bold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-Medium.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-Light.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-Thin.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url(Geist/Geist-UltraBlack.otf);
+    font-weight: 1000;
+}

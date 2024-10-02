@@ -1,0 +1,126 @@
+.home {
+    overflow:auto;
+    height:fit-content;
+
+    .hero {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        overflow: hidden;
+        position: relative;
+
+        .hero-background{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: opacity1 5s forwards;
+            -webkit-mask-image: radial-gradient(ellipse at center, transparent 10%, #000);
+            mask-image: radial-gradient(ellipse at center, transparent 20%, #000);
+            background-color: black;
+            
+        }
+
+        h1{
+            color:#CFCFCF;
+            font-family:'Geist Sans';
+            font-weight:900;
+            font-size: 40px;
+        }
+
+        .ripple {
+            animation: rippleEffect 5s forwards;
+            opacity: 0;
+            position: absolute;
+            align-self: center;
+            justify-self: center;
+            height: 3vw;
+            aspect-ratio: 1/1;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+        }
+        .hero-content{
+            opacity:0;
+            animation: opacity1 2s forwards;
+            animation-delay:2s;
+
+        }
+
+
+    }
+
+    .home-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: opacity 5s forwards;
+
+    }
+
+    .info{
+        width:100%;
+        background-color: black;
+        margin-top:50px;
+        display:flex;
+        justify-content:center;
+        flex-direction: column;
+        gap:30px;
+    }
+
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        /* transform: scale(2); */
+
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(50);
+        opacity: 0;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0.02;
+    }
+    100% {
+        opacity: 0.08;
+    }
+}
+
+
+@keyframes opacity1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

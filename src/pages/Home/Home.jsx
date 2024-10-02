@@ -1,10 +1,29 @@
 import React from 'react';
-import Background from '../../assets/background2.svg';
+import Background from '../../assets/background1.svg';
 import Spotlight from '../../assets/spotlight1.svg';
 import Experience from '../../components/Experience/Experience';
+import { ExperienceTimeline } from '../../components/ExperienceTimeline/ExperienceTimeline';
+
 import './Home.css';
 
 const Home = () => {
+    const experiences = [
+        {
+            title: "First Experience",
+            content: "This is the first experience",
+            header: "Fall 2024"
+        },
+        {
+            title: "Second Experience",
+            content: "This is the second experience",
+            header: "Spring 2025"   
+        },
+        {
+            title: "Third Experience",
+            content: "This is the third experience",
+            header: "Fall 2025"
+        }
+    ];
     const numAnimations = 1;
     return (
         <div className="home page" >
@@ -25,12 +44,14 @@ const Home = () => {
                     <h1>hello, i'm james</h1>
                 </div>
             </section>
+            <ExperienceTimeline data={experiences}/>
             <section className="info">
                 <Experience index={0}/>
                 <Experience index={1}/>
                 <Experience index={2}/>
-
+                
             </section>
+
             
         </div>
     );

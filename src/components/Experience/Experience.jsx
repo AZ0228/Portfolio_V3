@@ -1,6 +1,6 @@
 import React from 'react';
 import './Experience.css';
-import Background from '../../assets/background1.svg';
+import Background from '../../assets/background.svg';
 import Cross from '../../assets/Cross.svg';
 
 const Experience = ({ index }) => {

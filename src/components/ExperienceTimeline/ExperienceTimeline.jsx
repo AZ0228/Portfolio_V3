@@ -16,8 +16,8 @@ export const ExperienceTimeline = ({ data }) => {
                 }
             });
         }, {
-            rootMargin: "-300px 0px -300px 0px", // 400px offset from the top
-            // threshold: 0 // Trigger as soon as the element is in the viewport (minus 400px)
+            rootMargin: "-40% 0px -40% 0px", // 400px offset from the top
+            threshold: 0 // Trigger as soon as the element is in the viewport (minus 400px)
         });
 
         // Observe each timeline item

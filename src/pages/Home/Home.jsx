@@ -10,9 +10,9 @@ const Home = () => {
     const experiences = [
         {
             title: "Software Engineering Intern",
-            subheader: "Activeherb Technology Inc.",
+            company: "Activeherb Technology Inc.",
             content: "This is the first experience",
-            header: "Fall 2024"
+            header: "May 2024 - Current"
         },
         {
             title: "Second Experience",

@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from '../../assets/background1.svg';
+import Background from '../../assets/background2.svg';
 import Spotlight from '../../assets/spotlight1.svg';
 import Experience from '../../components/Experience/Experience';
 import { ExperienceTimeline } from '../../components/ExperienceTimeline/ExperienceTimeline';
@@ -9,7 +9,8 @@ import './Home.css';
 const Home = () => {
     const experiences = [
         {
-            title: "First Experience",
+            title: "Software Engineering Intern",
+            subheader: "Activeherb Technology Inc.",
             content: "This is the first experience",
             header: "Fall 2024"
         },
@@ -24,7 +25,7 @@ const Home = () => {
             header: "Fall 2025"
         }
     ];
-    const numAnimations = 1;
+    const numAnimations = 2;
     return (
         <div className="home page" >
             <div className="home-background" style={{backgroundImage:`url(${Background})`}}></div>

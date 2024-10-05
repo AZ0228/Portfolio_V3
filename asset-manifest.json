@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Portfolio_V3/static/css/main.c70741a6.css",
+    "main.js": "/Portfolio_V3/static/js/main.2eed68fb.js",
+    "static/js/453.c71d13ff.chunk.js": "/Portfolio_V3/static/js/453.c71d13ff.chunk.js",
+    "static/media/studycompass1.png": "/Portfolio_V3/static/media/studycompass1.52af73dafd442a603b97.png",
+    "static/media/studycompass2.png": "/Portfolio_V3/static/media/studycompass2.22884c7e1c9b8ece07bd.png",
+    "static/media/studycompass4.png": "/Portfolio_V3/static/media/studycompass4.b27475ff358deb0ec4b2.png",
+    "static/media/studycompass3.png": "/Portfolio_V3/static/media/studycompass3.dae01c4f5cc724a2508b.png",
+    "static/media/Geist-UltraBlack.otf": "/Portfolio_V3/static/media/Geist-UltraBlack.3a42204b2ec3a466fdd9.otf",
+    "static/media/Geist-Black.otf": "/Portfolio_V3/static/media/Geist-Black.f9352da8b6bfdc1609fa.otf",
+    "static/media/Geist-Bold.otf": "/Portfolio_V3/static/media/Geist-Bold.e2c3afa732bd68a687e6.otf",
+    "static/media/Geist-Medium.otf": "/Portfolio_V3/static/media/Geist-Medium.b15a8f2f899c5b06c3c4.otf",
+    "static/media/Geist-Light.otf": "/Portfolio_V3/static/media/Geist-Light.0f3742ef38b5177cbe72.otf",
+    "static/media/Geist-Regular.otf": "/Portfolio_V3/static/media/Geist-Regular.3715c65b06147442380a.otf",
+    "static/media/Geist-Thin.otf": "/Portfolio_V3/static/media/Geist-Thin.59f6dd1f7e3169ba30dd.otf",
+    "static/media/logo.svg": "/Portfolio_V3/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/spotlight1.svg": "/Portfolio_V3/static/media/spotlight1.0c3ba827e7b3a9bdba3987b9a9dd08e5.svg",
+    "index.html": "/Portfolio_V3/index.html",
+    "static/media/background2.svg": "/Portfolio_V3/static/media/background2.1f1b2b685ff07c20d69d0aec706a6e9f.svg",
+    "static/media/background1.svg": "/Portfolio_V3/static/media/background1.eff9a404180a4f6bbc478f78a427c39d.svg",
+    "static/media/background.svg": "/Portfolio_V3/static/media/background.efac621fec8dfbc52c34af7d10aa5de5.svg",
+    "static/media/Cross.svg": "/Portfolio_V3/static/media/Cross.0415f86eb10615d941f8efbc2f334024.svg",
+    "main.c70741a6.css.map": "/Portfolio_V3/static/css/main.c70741a6.css.map",
+    "main.2eed68fb.js.map": "/Portfolio_V3/static/js/main.2eed68fb.js.map",
+    "453.c71d13ff.chunk.js.map": "/Portfolio_V3/static/js/453.c71d13ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c70741a6.css",
+    "static/js/main.2eed68fb.js"
+  ]
+}

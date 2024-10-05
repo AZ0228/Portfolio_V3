@@ -1,89 +1,145 @@
-.entry{
+.entry {
     justify-content: center;
-    padding:64px;
+    padding: 64px;
     box-sizing: border-box;
-    width:fit-content;  
+    width: fit-content;  
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 0), inset 0px 0px 50px rgba(0, 0, 0),
+    inset 0px 0px 50px rgba(0, 0, 0), inset 0px 0px 64px rgba(0, 0, 0);
+
     position: relative;
-    height:600px;
     flex-grow: 1;
-    transition: all 0.5s;
-    
-    // justify-content: center;
-    gap:50px;
-    .bar{
+    transition: all 0.5s; // Ensure all transitions happen on the entry
+  
+    gap: 50px;
+  
+    .bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--background-color);
+      height: 2px;
+    }
+
+    .point{
         position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        background-color: var(--background-color);
-        height:2px;
+        top: 70px;
+        left:17px;
+        width: 20px;
+        height: 20px;
+        background-color: #ff7e5f;
+        border-radius: 50%;
+        z-index: 3;
     }
-    .entry-header{
-        position: -webkit-sticky;
-        position: sticky;
-        top:20px;
-        
+  
+    .entry-header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 80px;
     }
-    .smokescreen{
-        position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background-color: rgba(0,0,0);
-        z-index: 1;
-        transition: all 1s ease-in-out;
-        opacity:0.7;
-    }
-    .smokescreen.invisible{
+  
+    .smokescreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0);
+      z-index: 1;
+      opacity: 0.7;
+      transition: opacity 1s ease-in-out;
+  
+      &.invisible {
+        transition: opacity 1s ease-in-out; 
         opacity: 0;
         z-index: -1;
+      }
     }
-    .entry-content{
-        transition: all 0.5s ease-in-out;
+  
+    .entry-content {
+      transition: transform 0.5s ease-in-out; // Only transform should animate
+      z-index: 2;
+      transform: translateX(20px); // Starting translate
+  
+      h3 {
         z-index: 2;
-        transform:translateX(20px);
-
-        h3{
-            z-index: 2;
-            transition: all 0.5s;
-            margin-top:0;
-            font-size:25px;
-            background: linear-gradient(45deg, var(--text-color), var(--text-color)); /* Define your gradient here */
-            -webkit-background-clip: text; /* Clip the background to the text */
-            -webkit-text-fill-color: transparent; /* Make the text transparent so the background shows */
-            background-clip: text; /* For non-webkit browsers */
-            font-size:22px;
+        transition: background 1s; // Ensure background gradient transition
+        margin-top: 0;
+        font-size: 25px;
+        background: linear-gradient(45deg, var(--text-color), var(--text-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 22px;
+  
+        b {
+            background: linear-gradient(45deg, var(--text-color), var(--text-color));
+            -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
-        b{
-            font-size:25px;
+      }
+  
+      b {
+        font-size: 25px;
+      }
+  
+      .link {
+        display: flex;
+        width: calc(20 * 32px);
+        height: fit-content;
+        border: 1px solid;
+        border-color: hsla(0, 0%, 100%, .2);
+        box-sizing: border-box;
+        position: relative;
+        background-color: black;
+        padding: 20px;
+  
+        img {
+          height: 100%;
         }
+  
+        .cross {
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          opacity: 0.6;
+  
+          &.tl {
+            top: -15px;
+            left: -15px;
+          }
+  
+          &.tr {
+            top: -15px;
+            right: -15px;
+          }
+  
+          &.bl {
+            bottom: -15px;
+            left: -15px;
+          }
+  
+          &.br {
+            bottom: -15px;
+            right: -15px;
+          }
+        }
+      }
     }
-    
-
-}
-
-.entry.visible{
-    transform:scale(1);
-    // display: flex;
-
-    /* opacity: 0; */
-    /* animation: opacity 1s ease-in-out forwards; */
-
-    box-shadow: inset 0px 0px 50px rgba(0,0,0),inset 0px 0px 50px rgba(0,0,0),inset 0px 0px 50px rgba(0,0,0),inset 0px 0px 64px rgba(0,0,0);
-    
-    .entry-content{
-        transform:translateX(0);
-
-        h3{
-
+  
+    &.visible {
+  
+      .entry-content {
+        transform: translateX(0); // Animate transform
+  
+        h3 b {
+          background: linear-gradient(90deg, #ff7e5f, #feb47b);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
-        h3 b{
-            background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Define your gradient here */
-            -webkit-background-clip: text; /* Clip the background to the text */
-            -webkit-text-fill-color: transparent; /* Make the text transparent so the background shows */
-            background-clip: text; /* For non-webkit browsers */
-
-        }
+      }
     }
-}
+  }
+  

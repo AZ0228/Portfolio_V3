@@ -1,5 +1,7 @@
 .home {
     height:fit-content;
+    background-color: black;
+    z-index: 3;
 
     .hero {
         height: 100vh;
@@ -26,7 +28,6 @@
             mask-image: linear-gradient(180deg, #fff 5%, transparent 20%); */
 
             background-color: black;
-            
         }
 
         h1{
@@ -74,6 +75,7 @@
 
     .info{
         width:100%;
+        z-index: 3;
         background-color: black;
         margin-top:50px;
         display:flex;
@@ -81,6 +83,7 @@
         align-items:center;
         flex-direction: column;
         gap:30px;
+
     }
 
 }

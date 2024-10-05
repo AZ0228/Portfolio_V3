@@ -7,7 +7,6 @@ export const ExperienceTimeline = ({ data }) => {
     const itemRefs = useRef([]); // Store refs for each timeline item
 
     useEffect(() => {
-        // Create IntersectionObserver with 400px margin from the top
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -16,7 +15,7 @@ export const ExperienceTimeline = ({ data }) => {
                 }
             });
         }, {
-            rootMargin: "-40% 0px -40% 0px", // 400px offset from the top
+            rootMargin: "-40% 0px -60% 0px", 
             threshold: 0 // Trigger as soon as the element is in the viewport (minus 400px)
         });
 
@@ -35,7 +34,7 @@ export const ExperienceTimeline = ({ data }) => {
         <div className="experience-timeline">
             <div className="header">
                 <h2>My Journey</h2>
-                <p>I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s a timeline of my journey.</p>
+                <p>Here&apos;s a timeline of my journey.</p>
             </div>
             <div className="timeline">
                 {data.map((item, index) => (
@@ -45,7 +44,7 @@ export const ExperienceTimeline = ({ data }) => {
                         ref={(el) => (itemRefs.current[index] = el)} // Assign ref for each item
                     >
                         <div className="col">
-                            <h3 className="timeline-marker">{item.header}</h3>
+                            <h3 className={`timeline-marker ${focusedIndex === index ? 'focused' : ""}`}>{item.header}</h3>
                         </div>
                         <Entry key={index} data={item} index={index} visible={focusedIndex === index} />
                     </div>

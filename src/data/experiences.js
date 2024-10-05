@@ -2,6 +2,11 @@
 
 import activeherbImage from '../assets/activeherb.png';
 
+import studycompass1 from '../assets/experiences/studycompass/studycompass1.png';
+import studycompass2 from '../assets/experiences/studycompass/studycompass2.png';
+import studycompass3 from '../assets/experiences/studycompass/studycompass3.png';
+import studycompass4 from '../assets/experiences/studycompass/studycompass4.png';
+
 export const experiences = [
   {
     title: "Software Engineering Intern",
@@ -20,7 +25,9 @@ export const experiences = [
     company: "Study Compass",
     header: "Dec 2023 - Current",
     content:
-        "I founded Study Compass to help RPI students easily find study spaces in real-time. Since launching, the platform has grown to over 200 active users and attracted thousands of unique visits. Leading a team of four developers, I implemented the MERN stack and used JIRA to streamline our workflow, improving collaboration by 30%. User engagement increased by 20% within three months of launch, and the platform continues to thrive as a key resource for the student community."
+        "I founded Study Compass to help RPI students easily find study spaces in real-time. Since launching, the platform has grown to over 200 active users and attracted thousands of unique visits. Leading a team of four developers, I implemented the MERN stack and used JIRA to streamline our workflow, improving collaboration by 30%. User engagement increased by 20% within three months of launch, and the platform continues to thrive as a key resource for the student community.",
+    images: [[studycompass1, studycompass2],[studycompass3, studycompass4]],
+    imgaesPerRow: 2,
   },
   {
     title: "Third Experience",

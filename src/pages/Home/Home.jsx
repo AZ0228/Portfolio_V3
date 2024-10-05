@@ -26,7 +26,7 @@ const Home = () => {
     }, []);
 
 
-    const numAnimations = 2;
+    const numAnimations = 1;
     return (
         <div className="home page">
             <Line visible={showLine} setPosition={setLinePosition}/>

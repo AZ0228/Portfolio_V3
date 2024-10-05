@@ -39,6 +39,17 @@ export const Entry = ({ data, index, visible}) => {
                         <img src={Cross} alt="" className="cross br"/>
                     </div>
                 )} */}
+                {data.images && 
+                    <div className="images">
+                        {data.images.map((row, i) => (
+                            <div key={i} className="image-row">
+                                {row.map((image, j) => (
+                                    <img key={j} src={image} alt="" />
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                }
             </div>
 
         </div>

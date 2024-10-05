@@ -1,51 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Background from '../../assets/background2.svg';
 import Spotlight from '../../assets/spotlight1.svg';
 import Experience from '../../components/Experience/Experience';
 import { ExperienceTimeline } from '../../components/ExperienceTimeline/ExperienceTimeline';
 import { Line } from '../../components/Line/Line';
+import { Icon } from '@iconify/react';
 
 import './Home.css';
 import activeherb from '../../assets/activeherb.png';
 
+import { experiences } from '../../data/experiences';
+
 const Home = () => {
-    const experiences = [
-        {
-            title: "Software Engineering Intern",
-            company: "Activeherb",
-            header: "May 2024 - Current",
-            content:"At Activeherb Technology, I had the opportunity to take ownership of the entire FAQ system, redesigning it to be more intuitive for both customers and staff. By crafting tools that enabled customer service representatives to share links seamlessly and quickly search for answers, I was able to increase FAQ page visits by 50%. This overhaul also dramatically reduced the time it took to resolve customer inquiries. Beyond that, I took on the challenge of optimizing the home page load time, reducing it by 60%. I did this by moving away from external libraries and developing a lightweight custom framework for the animated hero banner—ultimately delivering a smoother and more enjoyable user experience.",
-            // bullets: [
-            //     "Refactored the entire FAQ system for both customer and staff interfaces by developing tools for customer service representatives that integrated robust link-sharing and search functionalities. These improvements resulted in a 50% increase in FAQ page visits and significantly reduced issue resolution times.",
-            //     "Optimized the home page load time by 60% through minimizing reliance on heavy external libraries and developing a custom lightweight framework for the animated hero banner, enhancing the overall user experience."
-            // ],
-            link:{
-                url: "https://www.activeherb.com/",
-                text: "Activeherb.com",
-                image: activeherb
-            }
-            
-        },
-        {
-            title: "Founder and Lead Developer",
-            company: "Study Compass",
-            header: "May 2024 - Current",
-            bullets: [
-                "Refactored the entire FAQ system for both customer and staff interfaces by developing tools for customer service representatives that integrated robust link-sharing and search functionalities. These improvements resulted in a 50% increase in FAQ page visits and significantly reduced issue resolution times.",
-                "Optimized the home page load time by 60% through minimizing reliance on heavy external libraries and developing a custom lightweight framework for the animated hero banner, enhancing the overall user experience."
-            ]   
-        },
-        {
-            title: "Third Experience",
-            content: "This is the third experience",
-            header: "Fall 2025"
-        }
-    ];
+    const [showLine, setShowLine] = useState(false);
+    const [linePosition, setLinePosition] = useState(0);
+    const [lineAnimation, setLineAnimation] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLineAnimation(true);
+        }, 100);
+        setTimeout(() => {
+            setShowLine(true);
+        }, 2000);
+    }, []);
+
+
     const numAnimations = 2;
     return (
-        <div className="home page" >
-            <Line/>
+        <div className="home page">
+            <Line visible={showLine} setPosition={setLinePosition}/>
             <section className="hero">
+                <div className="line-animation" style={{left: `${linePosition}px`}}>
+                    <div className={`thumb ${lineAnimation && "visible"}`}></div>
+                </div>
+
             <div className="home-background" style={{backgroundImage:`url(${Background})`}}></div>
 
                 <div className="hero-background">
@@ -61,19 +50,20 @@ const Home = () => {
 
                 <div className="hero-content">
                     <h1>hello, i'm james</h1>
+                    <h3>I build meaningful and impactful digital experiences.</h3>
+                    <div className={`scroll`} style={{animationDelay: `3s`}}>
+                        
+                        <Icon icon="line-md:chevron-down" />
+                
+                        
+                        <p>scroll to learn more about me</p>
+                    </div>
                     {/* <div className="button-container">
                         <button>learn more about e</button>
                     </div> */}
                 </div>
             </section>
             <ExperienceTimeline data={experiences}/>
-            <section className="info">
-                <Experience index={0}/>
-                <Experience index={1}/>
-                <Experience index={2}/>
-                
-            </section>
-
             
         </div>
     );

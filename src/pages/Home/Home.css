@@ -3,6 +3,48 @@
     background-color: black;
     z-index: 3;
 
+    .line-animation{
+        height:100%;
+        width:5px;
+        position: absolute;
+        top:0;
+        z-index: 0;
+        .thumb{
+            position: relative;
+            display:grid;
+            &::before{
+                content:"";
+                position: absolute;
+                bottom:0px;
+                width:10px;
+                height:10px;
+                border-radius: 50%;
+                background-color: #feb47b;
+                justify-self:center;
+    
+            }
+            &.visible{
+                height:100%;
+                width:100%;
+                background: linear-gradient(
+                    180deg,              
+                    #ff7e5f 0%,  
+                    #ff7e5f 50%,   
+                    #feb47b 97%,        
+                    black 100%         
+                  );              
+                position: absolute;
+                top:0;
+                left:0;
+                animation: lineAnimation 1s forwards cubic-bezier(.17,.67,.83,.67);
+                &::before{
+                    opacity: 0;
+                }
+            }   
+        }
+    
+    }
+
     .hero {
         height: 100vh;
         width: 100%;
@@ -13,7 +55,7 @@
         overflow: hidden;
         position: relative;
         box-shadow: inset 0px 0px 50px rgba(0,0,0),inset 0px 0px 50px rgba(0,0,0),inset 0px 0px 50px rgba(0,0,0),inset 0px 0px 64px rgba(0,0,0);
-
+        z-index: 4;
 
         .hero-background{
             width: 100%;
@@ -30,13 +72,31 @@
             background-color: black;
         }
 
-        h1{
-            color:#CFCFCF;
-            font-family:'Geist Sans';
-            font-weight:900;
-            font-size: 40px;
+        .hero-content{
+            margin-left:15%;
+            h1{
+                color:#CFCFCF;
+                font-family:'Geist Sans';
+                font-weight:900;
+                font-size: 40px;
+            }
+            .scroll{
+                animation: opacity1 2s forwards;
+                opacity: 0;
+                margin-top:50px;
+                display:flex;
+                gap:5px;
+                align-items: center;
+                p{
+                    margin:0;   
+                }
+
+            }
+
+
         }
 
+        
         .ripple {
             animation: rippleEffect 5s forwards;
             opacity: 0;
@@ -59,8 +119,6 @@
             animation-delay:2s;
 
         }
-
-
     }
 
     .home-background {
@@ -83,9 +141,33 @@
         align-items:center;
         flex-direction: column;
         gap:30px;
-
     }
 
+}
+
+@media (max-width:500px) {
+    .home{
+        .hero{
+            box-shadow:inset 0px 0px 50px rgba(0,0,0);
+
+            .hero-content{
+                margin-left:50px;
+                z-index: 4;
+                padding-right: 40px;
+                box-sizing: border-box;
+                h1{
+                    font-size:30px;
+                }
+                h3{
+                    font-size:15px;
+                }
+                p{
+                    font-size:14px;
+                }
+            }
+        }
+    }
+    
 }
 
 @keyframes rippleEffect {
@@ -132,3 +214,12 @@
     }
 }
 
+
+@keyframes lineAnimation {
+    0% {
+        transform:translateY(-100%)
+    }
+    100% {
+        transform:translateY(0)
+    }
+}

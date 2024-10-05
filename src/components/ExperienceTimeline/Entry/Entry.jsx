@@ -14,7 +14,9 @@ export const Entry = ({ data, index, visible}) => {
     return (
         <div ref={entryRef} className={`entry ${visible ? "visible" : ""}`}style={{backgroundImage:`url(${visible ? Background1 : Background1})`}}>
             <div className="bar"></div>
-            <div className="point"></div>
+            <div className="point">
+                <div className="fill"></div>
+            </div>
             <div className={`smokescreen ${visible ? "invisible" : ""}`}>
             </div>
             <div className="entry-content">

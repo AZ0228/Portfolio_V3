@@ -11,14 +11,14 @@ export const Line = ({ index }) => {
         const contentElement = document.querySelector('.entry'); // Select the content element
         if (contentElement) {
             const contentRect = contentElement.getBoundingClientRect(); // Get the position of the content element
-            setLinePosition(contentRect.left+20); // Set the line position 20px to the left of the content element
+            setLinePosition(contentRect.left+25); // Set the line position 20px to the left of the content element
         }
 
         const handleResize = () => {
             // Update the line position on window resize to keep it responsive
             if (contentElement) {
                 const contentRect = contentElement.getBoundingClientRect();
-                setLinePosition(contentRect.left+20);
+                setLinePosition(contentRect.left+25);
             }
         };
 

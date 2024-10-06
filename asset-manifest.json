@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ebf0203d.css",
+    "main.css": "/static/css/main.5e74bfae.css",
     "main.js": "/static/js/main.896b0f07.js",
     "static/js/453.c71d13ff.chunk.js": "/static/js/453.c71d13ff.chunk.js",
     "static/media/studycompass1.png": "/static/media/studycompass1.52af73dafd442a603b97.png",
@@ -21,12 +21,12 @@
     "static/media/background1.svg": "/static/media/background1.eff9a404180a4f6bbc478f78a427c39d.svg",
     "static/media/background.svg": "/static/media/background.efac621fec8dfbc52c34af7d10aa5de5.svg",
     "static/media/Cross.svg": "/static/media/Cross.0415f86eb10615d941f8efbc2f334024.svg",
-    "main.ebf0203d.css.map": "/static/css/main.ebf0203d.css.map",
+    "main.5e74bfae.css.map": "/static/css/main.5e74bfae.css.map",
     "main.896b0f07.js.map": "/static/js/main.896b0f07.js.map",
     "453.c71d13ff.chunk.js.map": "/static/js/453.c71d13ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebf0203d.css",
+    "static/css/main.5e74bfae.css",
     "static/js/main.896b0f07.js"
   ]
 }

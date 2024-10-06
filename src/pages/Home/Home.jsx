@@ -6,7 +6,7 @@ import { ExperienceTimeline } from '../../components/ExperienceTimeline/Experien
 import { Line } from '../../components/Line/Line';
 import { Icon } from '@iconify/react';
 
-import './Home.css';
+import './Home.scss';
 import activeherb from '../../assets/activeherb.png';
 
 import { experiences } from '../../data/experiences';

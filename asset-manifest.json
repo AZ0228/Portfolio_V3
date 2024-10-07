@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e74bfae.css",
-    "main.js": "/static/js/main.dc9356d1.js",
+    "main.css": "/static/css/main.7688f1e5.css",
+    "main.js": "/static/js/main.d7796f16.js",
     "static/js/453.c71d13ff.chunk.js": "/static/js/453.c71d13ff.chunk.js",
     "static/media/studycompass1.png": "/static/media/studycompass1.52af73dafd442a603b97.png",
     "static/media/studycompass2.png": "/static/media/studycompass2.22884c7e1c9b8ece07bd.png",
@@ -18,15 +18,15 @@
     "static/media/spotlight1.svg": "/static/media/spotlight1.0c3ba827e7b3a9bdba3987b9a9dd08e5.svg",
     "index.html": "/index.html",
     "static/media/background2.svg": "/static/media/background2.1f1b2b685ff07c20d69d0aec706a6e9f.svg",
-    "static/media/background1.svg": "/static/media/background1.eff9a404180a4f6bbc478f78a427c39d.svg",
     "static/media/background.svg": "/static/media/background.efac621fec8dfbc52c34af7d10aa5de5.svg",
+    "static/media/background1.svg": "/static/media/background1.abe10a9eaf3406aa713c77eb2cd74740.svg",
     "static/media/Cross.svg": "/static/media/Cross.0415f86eb10615d941f8efbc2f334024.svg",
-    "main.5e74bfae.css.map": "/static/css/main.5e74bfae.css.map",
-    "main.dc9356d1.js.map": "/static/js/main.dc9356d1.js.map",
+    "main.7688f1e5.css.map": "/static/css/main.7688f1e5.css.map",
+    "main.d7796f16.js.map": "/static/js/main.d7796f16.js.map",
     "453.c71d13ff.chunk.js.map": "/static/js/453.c71d13ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e74bfae.css",
-    "static/js/main.dc9356d1.js"
+    "static/css/main.7688f1e5.css",
+    "static/js/main.d7796f16.js"
   ]
 }

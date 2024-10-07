@@ -51,7 +51,9 @@ export const ExperienceTimeline = ({ data }) => {
                         ref={(el) => (itemRefs.current[index] = el)} // Assign ref for each item
                     >
                         <div className="col">
-                            <h3 className={`timeline-marker ${focusedIndex === index ? 'focused' : ""}`}>{item.header}</h3>
+                            <div className={`timeline-marker ${focusedIndex === index ? 'focused' : ""}`}>
+                                <h3>{item.header}</h3>
+                            </div>
                         </div>
                         <Entry key={index} data={item} index={index} visible={focusedIndex === index} />
                     </div>
